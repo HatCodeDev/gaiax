@@ -1,64 +1,71 @@
 import React from "react";
 import wave from "../../assets/wave Gif.gif";
-import { FaReact } from "react-icons/fa";
-import { FaShuttleSpace, FaSpaceAwesome } from "react-icons/fa6";
+import { FaBolt, FaUserShield, FaBrain } from "react-icons/fa";
 
 const ServiceData = [
   {
-    title: "HST",
-    content: "300-1500km",
+    title: "Innovación con IA",
+    content: "Tecnología avanzada",
     description:
-      "Used for astronomical observations, capturing stunning images of the universe.",
-    icon: <FaReact className="text-7xl" />,
+      "Utilizamos inteligencia artificial para personalizar la capacitación, adaptándonos a las necesidades de cada empresa.",
+    icon: <FaBolt className="text-7xl text-[#5b5ee6]" />,
     aosDelay: "300",
   },
   {
-    title: "ISS",
-    content: "500-1500km",
+    title: "Seguridad y Confiabilidad",
+    content: "Protección de datos",
     description:
-      ", it's a habitable artificial satellite orbiting Earth and serves as a space environment research laboratory",
-    icon: <FaShuttleSpace className="text-7xl" />,
+      "Nuestra plataforma garantiza la seguridad de la información con encriptación avanzada y protección total.",
+    icon: <FaUserShield className="text-7xl text-[#5b5ee6]" />,
     aosDelay: "500",
   },
   {
-    title: "GPS",
-    content: "300-1500km",
+    title: "Entrenamiento Práctico",
+    content: "Aprender haciendo, no solo viendo",
     description:
-      "Part of the Global Positioning System (GPS) used for navigation.",
-    icon: <FaSpaceAwesome className="text-7xl" />,
+      "Mientras otras plataformas ofrecen solo videos y lecturas, nuestra app incluye simulaciones, retos interactivos y resolución de problemas.",
+    icon: <FaBrain className="text-7xl text-[#5b5ee6]" />,
     aosDelay: "700",
   },
 ];
+
 const HeroCard = () => {
   return (
     <>
-      <section className="bg-primary">
-        <div className="container">
-          <div className="min-h-[400px]">
-            <div>
-              <div className=" grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10 ">
-                {ServiceData.map((data, index) => {
-                  return (
-                    <div
-                      data-aos="fade-up"
-                      data-aos-delay={data.aosDelay}
-                      className="min-h-[180px] flex flex-col justify-center items-center rounded-xl gap-2 bg-sky-900/60 backdrop-blur-sm  text-white text-center text-2xl py-8 px-3 w-full lg:w-[300px] mx-auto"
-                    >
-                      {data.icon}
-                      <h1>{data.title}</h1>
-                      <p>{data.content}</p>
-                      <p className="text-sm">{data.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
-              <img
-                src={wave}
-                alt=""
-                className="h-[200px] w-full  object-cover mix-blend-screen -translate-y-24 relative z-[0]"
-              />
-            </div>
+      <section className="bg-black text-white">
+        <div className="container mx-auto">
+          <div data-aos="fade-up" className="text-center mb-12">
+            <h2 className="text-5xl sm:text-6xl font-extrabold text-[#5b5ee6]">
+              ¿Por qué elegirnos?
+            </h2>
+            <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+              En Gaiax, nos diferenciamos al ofrecer una plataforma de
+              capacitación inteligente que optimiza procesos y mejora el
+              rendimiento de las PYMES.
+            </p>
           </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10">
+            {ServiceData.map((data, index) => {
+              return (
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={data.aosDelay}
+                  className="flex flex-col justify-center items-center rounded-xl gap-4 bg-gray-800 p-8 text-white text-center shadow-lg hover:scale-105 transition-transform duration-300"
+                >
+                  {data.icon}
+                  <h1 className="text-2xl font-semibold">{data.title}</h1>
+                  <p className="text-lg text-[#5b5ee6] font-medium">{data.content}</p>
+                  <p className="text-gray-300 leading-relaxed">{data.description}</p>
+                </div>
+              );
+            })}
+          </div>
+          <img
+            src={wave}
+            alt=""
+            className="h-[200px] w-full object-cover mix-blend-screen -translate-y-24 relative z-[0]"
+          />
         </div>
       </section>
     </>

@@ -1,39 +1,48 @@
 import React from "react";
-import MountainPng from "../../assets/moon-surface-hd.png";
 
 const Hero = () => {
   return (
-    <div className=" bg-black/20 h-full">
-      <div className="h-full flex justify-center items-center p-4">
-        <div className="container grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="text-white space-y-4 lg:pr-36">
-            <h1 data-aos="fade-up" className="text-5xl font-bold">
-              ORBIT THE EARTH
-            </h1>
-            <p data-aos="fade-up" data-aos-delay="300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea
-              dolorem eius accusamus beatae. Nulla quis beatae quo, possimus
-              tempora similique dignissimos repellat aperiam veniam culpa
-              consequatur repudiandae asperiores saepe.
-            </p>
-            <button
-              data-aos="fade-up"
-              data-aos-delay="500"
-              className="bg-blue-400 text-white hover:bg-blue-500 px-4 py-1 rounded-md duration-200"
-            >
-              LEARN MORE
+    <div className="relative flex items-center justify-center h-screen px-6 sm:px-12" id="inicio">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+        <div className="text-white space-y-6 lg:pr-20 text-center sm:text-left">
+          <h1 
+            data-aos="fade-up" 
+            className="text-6xl sm:text-7xl font-extrabold text-[#5b5ee6] tracking-wide"
+          >
+            GAIAX
+          </h1>
+          <h2 
+            data-aos="fade-up" 
+            className="text-4xl sm:text-5xl font-bold leading-tight"
+          >
+            Transformando la Capacitación en PYMES con IA
+          </h2>
+          <p 
+            data-aos="fade-up" 
+            data-aos-delay="300" 
+            className="text-lg sm:text-xl text-gray-300 leading-relaxed"
+          >
+            La solución inteligente que revoluciona el aprendizaje en pequeñas y medianas empresas.
+          </p>
+          
+          <div 
+            data-aos="fade-up" 
+            data-aos-delay="500" 
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-4"
+          >
+            <button className="px-6 py-3 text-lg font-semibold text-white bg-[#5b5ee6] hover:bg-[#4a4dd4] rounded-lg shadow-md transition-all transform hover:scale-105">
+              Comenzar Ahora
             </button>
+            {/* <button className="px-6 py-3 text-lg font-semibold text-[#5b5ee6] border-2 border-[#5b5ee6] hover:bg-[#5b5ee6] hover:text-white rounded-lg shadow-md transition-all transform hover:scale-105">
+              Más Información
+            </button> */}
           </div>
-          <div></div>
         </div>
-      </div>
-      <img
-        src={MountainPng}
-        alt=""
-        className="absolute right-0 bottom-0 w-full brightness-50 z-10"
-      />
 
-      <div className="absolute bottom-0 z-30 right-0 w-full bg-gradient-to-b from-transparent from-10% to-primary to-90% h-[20px] sm:h-[50px] md:[60px]"></div>
+        
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black"></div>
     </div>
   );
 };
