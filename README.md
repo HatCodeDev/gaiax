@@ -1,10 +1,27 @@
-Enjoy the Free code + Assets 😍
+# 📦 Proyecto React
 
-  - Support us on YouTube Channel: https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ
-  - 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto desarrollado con React. Sigue los pasos a continuación para clonar e instalar todas las dependencias necesarias.
 
-Currently, two official plugins are available:
+## 🚀 Instalación y ejecución
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Clonar el repositorio
+
+```sh
+git clone https://github.com/tu-usuario/tu-repositorio.git
+```
+
+### Accede al proyecto
+```sh
+cd tu-repositorio
+```
+
+### Instalar las dependencias
+```sh
+npm install
+```
+
+### Ejecutar el proyecto
+```sh
+npm run build o dev
+```
+  
